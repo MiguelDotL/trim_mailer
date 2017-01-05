@@ -69,6 +69,25 @@ class EmailerFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def emailer_form_params
-      params.require(:emailer_form).permit(:name, :email, :proj_repo, :proj_url)
+      params.require(:emailer_form).permit( :name,
+                                            :email,
+                                            :proj_repo,
+                                            :proj_url,
+                                            :oop,
+                                            :modular,
+                                            :full_stack,
+                                            :testing,
+                                            :db,
+                                            :debugging,
+                                            :problem_solving,
+                                            :js,
+                                            :html,
+                                            :css,
+                                            :teamwork,
+                                            :self_motivation,
+                                            :communication,
+                                            :energy_level,
+                                            :aptitude,
+                                            :garbage_blocker)
     end
 end

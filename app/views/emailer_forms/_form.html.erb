@@ -1,37 +1,98 @@
-<%= form_for(emailer_form) do |f| %>
-  <% if emailer_form.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(emailer_form.errors.count, "error") %> prohibited this emailer_form from being saved:</h2>
+<div class="form-container">
+  <div class="form">
+    <%= form_for(emailer_form) do |f| %>
+      <% if emailer_form.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(emailer_form.errors.count, "error") %> prohibited this emailer_form from being saved:</h2>
 
-      <ul>
-      <% emailer_form.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% emailer_form.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+      <div class="applicant-info">
+        <%= f.text_field :name, placeholder: 'full name', required: true %>
+        <br>
+        <%= f.email_field :email, placeholder: 'email', required: true %>
+        <br>
+        <%= f.text_field :proj_repo, placeholder: 'project repo', required: true %>
+        <br>
+        <%= f.text_field :proj_url, placeholder: 'project url', required: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
 
-  <div class="field">
-    <%= f.label :proj_repo %>
-    <%= f.text_field :proj_repo %>
-  </div>
+      <!-- applicant self-assessment -->
+      <div class="assessment-item">
+        <%= f.label :oop, "Using best practices for OOP:", class: "assessment-lable" %>
+        <%= f.text_field :oop, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :modular, "Modular development:", class: "assessment-lable" %>
+        <%= f.text_field :modular, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :full_stack, "Full-stack workflow understanding:", class: "assessment-lable" %>
+        <%= f.text_field :full_stack, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :testing, "Testing:", class: "assessment-lable" %>
+        <%= f.text_field :testing, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :db, "Database knowledge:", class: "assessment-lable" %>
+        <%= f.text_field :db, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :debugging, "Debugging:", class: "assessment-lable" %>
+        <%= f.text_field :debugging, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :problem_solving, "Problem solving skills:", class: "assessment-lable" %>
+        <%= f.text_field :problem_solving, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :js, "JavaScript:", class: "assessment-lable" %>
+        <%= f.text_field :js, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :html, "HTML:", class: "assessment-lable" %>
+        <%= f.text_field :html, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :css, "CSS:", class: "assessment-lable" %>
+        <%= f.text_field :css, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :teamwork, "Working on a team:", class: "assessment-lable" %>
+        <%= f.text_field :teamwork, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :self_motivation, "Self motivation:", class: "assessment-lable" %>
+        <%= f.text_field :self_motivation, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :communication, "Communications skills:", class: "assessment-lable" %>
+        <%= f.text_field :communication, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :energy_level, "Your own energy level:", class: "assessment-lable" %>
+        <%= f.text_field :energy_level, required: true %>
+      </div>
+      <div class="assessment-item">
+        <%= f.label :aptitude, "Intelligence / Aptitude:", class: "assessment-lable" %>
+        <%= f.text_field :aptitude, required: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :proj_url %>
-    <%= f.text_field :proj_url %>
-  </div>
+      <!-- filled hidden_field == spambot -->
+      <div class="hidden">
+        <%#= f.text_field :garbage_blocker %>
+      </div>
+      <br>
 
-  <div class="actions">
-    <%= f.submit %>
+      <%= f.submit 'Submit', class: "actions button" %>
+    <% end %>
   </div>
-<% end %>
+</div>
