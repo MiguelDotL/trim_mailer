@@ -1,0 +1,1 @@
+json.array! @emailer_forms, partial: 'emailer_forms/emailer_form', as: :emailer_form

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Emailer Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Proj repo</th>
+      <th>Proj url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emailer_forms.each do |emailer_form| %>
+      <tr>
+        <td><%= emailer_form.name %></td>
+        <td><%= emailer_form.email %></td>
+        <td><%= emailer_form.proj_repo %></td>
+        <td><%= emailer_form.proj_url %></td>
+        <td><%= link_to 'Show', emailer_form %></td>
+        <td><%= link_to 'Edit', edit_emailer_form_path(emailer_form) %></td>
+        <td><%= link_to 'Destroy', emailer_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Emailer Form', new_emailer_form_path %>
