@@ -1,3 +1,152 @@
-// Place all the styles related to the EmailerForms controller here.
+// Place all the styles related to the mailer_form controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// -------- Imports -------- //
+@import 'vars.scss';
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('/assets/MuseoSans_500-webfont.eot');
+    src: url('/assets/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/MuseoSans_500-webfont.woff2') format('woff2'),
+         url('/assets/MuseoSans_500-webfont.woff') format('woff'),
+         url('/assets/MuseoSans_500-webfont.ttf') format('truetype'),
+         url('/assets/MuseoSans_500-webfont.svg#museo_sans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// -------- Base Styles & Defaults -------- //
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bkg-color;
+  font-family: 'museo_sans500', sans-serif;
+  font-size: 62.5%;
+}
+
+.wrapper {
+  background: $bkg-color;
+  color: $form-font-color;
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: center;
+  letter-spacing: .2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+// -------- Form Styles -------- //
+
+
+.form-container {
+  background: $form-color;
+  display: flex;
+  flex: 1 1 0;
+  justify-content: center;
+  margin: 4rem auto;
+  max-width: 31rem;
+  min-width: 320px;
+}
+
+
+.form {
+  color: $form-font-color;
+  display: flex;
+  flex: 1 1 0;
+
+  font-size: .8rem;
+
+  // justify-content: center;
+  margin: 2.4rem;
+  text-transform: uppercase;
+  width: 100%;
+
+  .applicant-info {
+    padding: 0 2rem 0 0;
+  }
+
+  input {
+    background: $field-color;
+    border: none;
+    color: $field-font-color;
+    font-family: 'museo_sans500', sans-serif;
+
+    height: 3.2rem;
+    letter-spacing: .2rem;
+
+    margin: 0 0 2rem;
+    padding: 0 1rem;
+    outline: none;
+    text-transform: uppercase;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: $field-font-color;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $field-font-color;
+      letter-spacing: .2rem;
+      padding: 0 1.4rem;
+      text-transform: uppercase;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: $field-font-color;
+      letter-spacing: .2rem;
+      padding: 0 1.4rem;
+      text-transform: uppercase;
+    }
+    &:-ms-input-placeholder {
+      color: $field-font-color;
+      letter-spacing: .2rem;
+      padding: 0 1.4rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .button {
+    color: $form-font-color;
+    background: $btn-color;
+    font-weight: bold;
+    margin: 2rem 0 0;
+    padding: 0;
+    &:hover {
+      background: darken($btn-color, 6%);
+      border: 2px solid darken($form-font-color, 1%);
+      color: darken($form-font-color, 1%);
+    }
+  }
+}
+
+.assessment-item {
+  align-items: center;
+  display: flex;
+  margin: 0 0 1.3rem;
+  justify-content: space-between;
+  width: 100%;
+  label {
+    display: block;
+    flex: 6 1 0;
+    line-height: 1.1rem;
+    margin-right: .4rem;
+  }
+
+  input {
+    display: block;
+    flex: 1 1 2.4rem;
+    margin: 0;
+    text-align: center;
+    max-width: 2.4rem;
+  }
+}
