@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105214416) do
+ActiveRecord::Schema.define(version: 20170105215259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170105214416) do
     t.integer  "communication"
     t.integer  "energy_level"
     t.integer  "aptitude"
+    t.string   "garbage_blocker"
   end
 
 end
