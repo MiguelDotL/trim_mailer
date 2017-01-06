@@ -1,7 +1,15 @@
 <h1>TRIM AGENCY</h1>
 <h2>Apprenticeship 2.0 Application</h2>
 
-<%= @form.name %> <br>
+<ul>
+  <% @form.attributes.each do |key, val| %>
+    <li><%= "#{key}: #{val}"%></li>
+  <% end %>
+</ul>
+
+
+
+<!-- <%= @form.name %> <br>
 <%= @form.email %> <br>
 <%= @form.proj_repo %> <br>
-<%= @form.proj_url %> <br>
+<%= @form.proj_url %> <br> -->

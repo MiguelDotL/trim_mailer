@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # form_mailer:
+  #   completed_form_email:
+  #     subject: "TRIM AGENCY | Apprenticeship 2.0 Application | #{form.name}"

@@ -1,3 +1,6 @@
-Form#completed_form_email
+TRIM AGENCY
+Apprenticeship 2.0 Application
 
-<%= @greeting %>, find me in app/views/form_mailer/completed_form_email.text.erb
+<% @form.attributes.each do |key, val| %>
+  <%= "#{key}: #{val}"%>
+<% end %>

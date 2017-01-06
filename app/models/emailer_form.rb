@@ -33,7 +33,15 @@ class EmailerForm < ApplicationRecord
 
   # spambot honeypot
   validates :country,
-            inclusion: { in: [''] }
+            # inclusion: { in: [''] },
             presence: false
+
+
+  # send our application with form_mailer
+  after_create :send_my_application
+
+  def send_my_application
+    FormMailer.completed_form_email(self).deliver_now
+  end
 
 end
