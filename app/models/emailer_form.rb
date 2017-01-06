@@ -31,7 +31,9 @@ class EmailerForm < ApplicationRecord
             numericality: { only_integer: true },
             presence: { message: "Please complete all fields!" }
 
-  validates :garbage_blocker,
+  # spambot honeypot
+  validates :country,
+            inclusion: { in: [''] }
             presence: false
 
 end

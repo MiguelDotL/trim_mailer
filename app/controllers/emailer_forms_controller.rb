@@ -31,6 +31,8 @@ class EmailerFormsController < ApplicationController
       if @emailer_form.save
         format.html { redirect_to sent_path, notice: 'Your application was sent successfully!' }
         format.json { render :show, status: :created, location: @emailer_form }
+        # send email
+        FormMailer.completed_form_email(@emailer_form).deliver
       else
         format.html { render :new }
         format.json { render json: @emailer_form.errors, status: :unprocessable_entity }
@@ -89,6 +91,6 @@ class EmailerFormsController < ApplicationController
                                             :communication,
                                             :energy_level,
                                             :aptitude,
-                                            :garbage_blocker)
+                                            :country)
     end
 end
