@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :emailer_forms, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/' => 'emailer_forms#new'
+  resources :emailer_forms, only: [:new, :create]
+
+  get '/' => 'emailer_forms#new', as: 'sent'
   post '/' => 'emailer_forms#create'
 
 end

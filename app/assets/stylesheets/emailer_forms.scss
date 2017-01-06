@@ -43,7 +43,7 @@ body {
   display: none;
 }
 
-.notice {
+#notice {
   border: 3px solid $form-font-color;
   color: $form-font-color;
   font-size: 1.2rem;
@@ -52,6 +52,34 @@ body {
   margin: 0 0 2.4rem;
   padding: 1.4rem 1rem;
   text-align: center;
+}
+
+#error_explanation {
+  border: 3px solid $form-font-color;
+  color: $form-font-color;
+  font-size: 1.2rem;
+  letter-spacing: .4rem;
+  line-height: 2.4rem;
+  margin: 0 0 2.4rem;
+  padding: 1.4rem 1rem;
+  text-align: center;
+
+  h2 {
+    border-bottom: 3px solid #D2ECD7;
+    padding: 0 0 .8rem 0;
+  }
+
+  ul {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding: .4rem 1.6rem .2rem;
+    text-align: left;
+
+    li {
+      list-style-type: square;
+      margin: 1rem 0 0 0;
+    }
+  }
 }
 
 // -------- Form Styles -------- //
@@ -122,6 +150,33 @@ body {
       padding: 0 1.4rem;
       text-transform: uppercase;
     }
+
+    &:focus {
+      &::-webkit-input-placeholder {
+        color: $field-focus-color;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $field-focus-color;
+        letter-spacing: .2rem;
+        padding: 0 1.4rem;
+        text-transform: uppercase;
+      }
+      &::-moz-placeholder {  /* Firefox 19+ */
+        color: $field-focus-color;
+        letter-spacing: .2rem;
+        padding: 0 1.4rem;
+        text-transform: uppercase;
+      }
+      &:-ms-input-placeholder {
+        color: $field-focus-color;
+        letter-spacing: .2rem;
+        padding: 0 1.4rem;
+        text-transform: uppercase;
+      }
+    }
+
   }
 
   .button {

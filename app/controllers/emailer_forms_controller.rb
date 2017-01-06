@@ -1,6 +1,6 @@
 class EmailerFormsController < ApplicationController
   # before_action :set_emailer_form, only: [:show, :edit, :update, :destroy]
-  before_action :set_emailer_form, only: [:show]
+  # before_action :set_emailer_form, only: [:show]
 
   # GET /emailer_forms
   # GET /emailer_forms.json
@@ -29,7 +29,7 @@ class EmailerFormsController < ApplicationController
 
     respond_to do |format|
       if @emailer_form.save
-        format.html { redirect_to new_emailer_form_path, notice: 'Your application was sent successfully!' }
+        format.html { redirect_to sent_path, notice: 'Your application was sent successfully!' }
         format.json { render :show, status: :created, location: @emailer_form }
       else
         format.html { render :new }
@@ -64,9 +64,9 @@ class EmailerFormsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_emailer_form
-      @emailer_form = EmailerForm.find(params[:id])
-    end
+    # def set_emailer_form
+    #   @emailer_form = EmailerForm.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def emailer_form_params
