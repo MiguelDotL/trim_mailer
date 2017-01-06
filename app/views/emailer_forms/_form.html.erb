@@ -1,6 +1,4 @@
 <div class="form-container">
-  <br>
-  <br>
   <div class="form">
     <%= form_for(emailer_form) do |f| %>
       <% if emailer_form.errors.any? %>
@@ -31,7 +29,6 @@
         <br>
         <%= f.text_field :proj_url, placeholder: 'project url', required: true %>
       </div>
-
 
       <!-- applicant self-assessment -->
       <div class="assessment-item">

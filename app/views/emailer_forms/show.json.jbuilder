@@ -1,1 +1,0 @@
-json.partial! "emailer_forms/emailer_form", emailer_form: @emailer_form
