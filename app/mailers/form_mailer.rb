@@ -8,7 +8,7 @@ class FormMailer < ApplicationMailer
   def completed_form_email(form)
     @form = form
 
-    mail  to: "miguel.d.loznao@gmail.com",
+    mail  to: "miguel.d.lozano@gmail.com",
           from: "#{form.name} <#{form.email}>",
           subject: "TRIM AGENCY | Apprenticeship 2.0 Application | #{form.name}"
   end

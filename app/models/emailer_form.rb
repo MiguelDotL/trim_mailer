@@ -41,7 +41,7 @@ class EmailerForm < ApplicationRecord
   after_create :send_my_application
 
   def send_my_application
-    FormMailer.completed_form_email(self).deliver_now
+    FormMailer.completed_form_email(self).deliver_now!
   end
 
 end
