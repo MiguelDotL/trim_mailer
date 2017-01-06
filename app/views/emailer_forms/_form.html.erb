@@ -1,16 +1,23 @@
 <div class="form-container">
+  <br>
+  <br>
   <div class="form">
     <%= form_for(emailer_form) do |f| %>
       <% if emailer_form.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(emailer_form.errors.count, "error") %> prohibited this emailer_form from being saved:</h2>
+          <h1>Oops!</h1>
+          <h2>Looks like we have <%= pluralize(emailer_form.errors.count, "problem") %>:</h2>
 
           <ul>
           <% emailer_form.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
           </ul>
+          <br>
         </div>
+      <% end %>
+      <% if notice %>
+        <h1 class="notice"><%= notice %></h1>
       <% end %>
 
       <div class="applicant-info">

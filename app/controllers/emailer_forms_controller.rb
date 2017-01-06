@@ -1,16 +1,17 @@
 class EmailerFormsController < ApplicationController
-  before_action :set_emailer_form, only: [:show, :edit, :update, :destroy]
+  # before_action :set_emailer_form, only: [:show, :edit, :update, :destroy]
+  before_action :set_emailer_form, only: [:show]
 
   # GET /emailer_forms
   # GET /emailer_forms.json
-  def index
-    @emailer_forms = EmailerForm.all
-  end
+  # def index
+  #   @emailer_forms = EmailerForm.all
+  # end
 
   # GET /emailer_forms/1
   # GET /emailer_forms/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /emailer_forms/new
   def new
@@ -18,8 +19,8 @@ class EmailerFormsController < ApplicationController
   end
 
   # GET /emailer_forms/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /emailer_forms
   # POST /emailer_forms.json
@@ -28,7 +29,7 @@ class EmailerFormsController < ApplicationController
 
     respond_to do |format|
       if @emailer_form.save
-        format.html { redirect_to @emailer_form, notice: 'Emailer form was successfully created.' }
+        format.html { redirect_to new_emailer_form_path, notice: 'Your application was sent successfully!' }
         format.json { render :show, status: :created, location: @emailer_form }
       else
         format.html { render :new }
@@ -37,29 +38,29 @@ class EmailerFormsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /emailer_forms/1
-  # PATCH/PUT /emailer_forms/1.json
-  def update
-    respond_to do |format|
-      if @emailer_form.update(emailer_form_params)
-        format.html { redirect_to @emailer_form, notice: 'Emailer form was successfully updated.' }
-        format.json { render :show, status: :ok, location: @emailer_form }
-      else
-        format.html { render :edit }
-        format.json { render json: @emailer_form.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /emailer_forms/1
-  # DELETE /emailer_forms/1.json
-  def destroy
-    @emailer_form.destroy
-    respond_to do |format|
-      format.html { redirect_to emailer_forms_url, notice: 'Emailer form was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # # PATCH/PUT /emailer_forms/1
+  # # PATCH/PUT /emailer_forms/1.json
+  # def update
+  #   respond_to do |format|
+  #     if @emailer_form.update(emailer_form_params)
+  #       format.html { redirect_to @emailer_form, notice: 'Emailer form was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @emailer_form }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @emailer_form.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+  #
+  # # DELETE /emailer_forms/1
+  # # DELETE /emailer_forms/1.json
+  # def destroy
+  #   @emailer_form.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to emailer_forms_url, notice: 'Emailer form was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

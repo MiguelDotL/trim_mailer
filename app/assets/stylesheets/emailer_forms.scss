@@ -43,7 +43,16 @@ body {
   display: none;
 }
 
-
+.notice {
+  border: 3px solid $form-font-color;
+  color: $form-font-color;
+  font-size: 1.2rem;
+  letter-spacing: .4rem;
+  line-height: 2.4rem;
+  margin: 0 0 2.4rem;
+  padding: 1.4rem 1rem;
+  text-align: center;
+}
 
 // -------- Form Styles -------- //
 
