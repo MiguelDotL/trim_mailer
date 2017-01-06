@@ -8,9 +8,10 @@ class EmailerForm < ApplicationRecord
             uniqueness: { message: "This repositiry belongs to someone else" }
 
   validates :email,
-            format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i },
+            format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
+                      message: "Email format invalid" },
             presence: { message: "Please complete all fields!" },
-            uniqueness: { message: "This email address has already been used" }
+            uniqueness: { message: "Email address has already been used" }
 
   validates :oop,
             :modular,

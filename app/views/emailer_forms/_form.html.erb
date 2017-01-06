@@ -8,8 +8,11 @@
           <h1>Oops!</h1>
           <h2>Looks like we have <%= pluralize(emailer_form.errors.count, "problem") %>:</h2>
 
+          <div class="divider"></div>
+
           <ul>
-          <% emailer_form.errors.full_messages.each do |message| %>
+          <% emailer_form.errors.each do | attrribute, message| %>
+            <!-- do nothing with attribute -->
             <li><%= message %></li>
           <% end %>
           </ul>
