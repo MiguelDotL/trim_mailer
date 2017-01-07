@@ -1,7 +1,8 @@
 class EmailerForm < ApplicationRecord
+
   validates :name,
             :proj_url,
-            presence: { message: "Please complete all fields!" }
+            presence: { message: "Please complete all fields" }
 
   validates :proj_repo,
             presence: { message: "Please complete all fields!" },
@@ -10,7 +11,7 @@ class EmailerForm < ApplicationRecord
   validates :email,
             format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
                       message: "Email format invalid" },
-            presence: { message: "Please complete all fields!" },
+            presence: { message: "Please complete all fields" },
             uniqueness: { message: "Email address has already been used" }
 
   validates :oop,
@@ -28,8 +29,9 @@ class EmailerForm < ApplicationRecord
             :communication,
             :energy_level,
             :aptitude,
-            numericality: { only_integer: true },
-            presence: { message: "Please complete all fields!" }
+            numericality: { only_integer: true,
+                            message: "Skill assessments may only be numbers" },
+            presence: { message: "Please complete all fields" }
 
   # spambot honeypot
   validates :country,

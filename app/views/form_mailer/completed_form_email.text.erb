@@ -1,6 +1,26 @@
 TRIM AGENCY
 Apprenticeship 2.0 Application
 
-<% @form.attributes.each do |key, val| %>
-  <%= "#{key}: #{val}"%>
-<% end %>
+//APPLICANT INFORMATION//
+Full Name: <%= @form.name %>
+Email: <%= @form.email %>
+Project Repo: <%= @form.proj_repo %>
+Project URL: <%= @form.proj_url %>
+
+
+//APPLICANT SELF-ASSESSMENT//
+Using best practices for OOP: <%= @form.oop %>
+Modular Development: <%= @form.modular %>
+Full-Stack Workflow Understanding: <%= @form.full_stack %>
+Testing: <%= @form.testing %>
+Database Knowledge: <%= @form.db %>
+Debugging: <%= @form.debugging %>
+Problem Solving Skills: <%= @form.problem_solving %>
+JavaScript: <%= @form.js %>
+HTML: <%= @form.html %>
+CSS: <%= @form.css %>
+Working on a Team: <%= @form.teamwork %>
+Self Motivation: <%= @form.self_motivation %>
+Communications Skills: <%= @form.communication %>
+Your Own Energy Level: <%= @form.energy_level %>
+Intelligence / Aptitude: <%= @form.aptitude %>
