@@ -6,11 +6,6 @@ Built for my [Apprenticeship 2.0](http://trimagency.com/apprentice/) coding chal
 * [The MockUp](https://www.dropbox.com/s/fcmmghnfrszfk6l/codingchallenge.psd?dl=0) - How it Needed to Look
 * [The Final Product](https://trim-mailer.herokuapp.com/) - What I Sent Them
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 ### Ruby Version:
 * Development: ruby 2.3.3
 * Production:  ruby 2.2.6
