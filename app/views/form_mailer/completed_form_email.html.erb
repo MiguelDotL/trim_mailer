@@ -18,13 +18,13 @@
           <td style="font-size:.9rem; padding:10px;"><strong>Full Name:</strong> <%= @form.name %></td>
         </tr>
         <tr>
-          <td style="font-size:.9rem; padding:10px;"><strong>Email:</strong> <%= @form.email %></td>
+          <td style="font-size:.9rem; padding:10px;"><strong>Email:</strong> <a style="color: #D2ECD7; text-decoration:none;" href="mailto:<%= @form.email %>"><%= @form.email %></a></td>
         </tr>
         <tr>
-          <td style="font-size:.9rem; padding:10px;"><strong>Project Repo:</strong> <%= @form.proj_repo %></td>
+          <td style="font-size:.9rem; padding:10px;"><strong>Project Repo:</strong> <a style="color: #D2ECD7; text-decoration:none;" href="<%= @form.proj_repo %>"><%= @form.proj_repo %></a></td>
         </tr>
         <tr>
-          <td style="font-size:.9rem; padding:10px;"><strong>Project Url:</strong> <%= @form.proj_url %></td>
+          <td style="font-size:.9rem; padding:10px;"><strong>Project Url:</strong> <a style="color: #D2ECD7; text-decoration:none;" href="<%= @form.proj_url %>"><%= @form.proj_url %></a></td>
         </tr>
         <tr>
           <td colspan="2" style=" font-size:1.1rem;font-weight:bold; text-align:center; padding-top:2rem; padding-bottom:1rem;">Applicant Self-Assessment:</td>
