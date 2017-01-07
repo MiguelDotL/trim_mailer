@@ -11,12 +11,12 @@ Built for my [Apprenticeship 2.0](http://trimagency.com/apprentice/) coding chal
 * Production:  ruby 2.2.6
 
 ### Dependencies & Services
-* Rails 5.0.1^
-* PostGreSQL 9.5.5^
+* [Rails](http://rubyonrails.org/) 5.0.1^
+* [PostGreSQL](https://www.postgresql.org/) 9.5.5^
 * [SendGrid](https://sendgrid.com) Mail Service Account
 
 ### Configuration & Deployment
-* Clone or [Fork](https://github.com/MiguelDotL/trim_mailer#fork-destination-box) my [Repo](https://github.com/MiguelDotL/trim_mailer)
+* Clone or Fork my [Repo](https://github.com/MiguelDotL/trim_mailer)
 * `cd` into App Directory and run the`bundle install` command to load gem dependencies
 * Start the Server on Port `3000` with the `rails s` command 
 * Initialize the PostGreSQL Database with the `rake db:setup` command
