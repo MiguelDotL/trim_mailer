@@ -6,7 +6,7 @@ class FormMailer < ApplicationMailer
     @form = form
     applicant = "#{form.name} <#{form.email}>"
 
-    mail  to: ENV['MY_EMAIL'],
+    mail  to: ENV['TRIM_EMAIL'],
           bcc: applicant, # make sure that my application gets sent
           from: applicant,
           subject: "TRIM AGENCY | Apprenticeship 2.0 Application | #{form.name}"
