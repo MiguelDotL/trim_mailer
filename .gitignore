@@ -18,3 +18,5 @@
 
 # Ignore Environment Variables
 .env
+
+table.html

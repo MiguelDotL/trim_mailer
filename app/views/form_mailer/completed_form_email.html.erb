@@ -1,26 +1,95 @@
-<h1>TRIM AGENCY</h1>
-<h2>Apprenticeship 2.0 Application</h2>
-
-
-
-
-<%= @form.name %> <br>
-<%= @form.email %> <br>
-<%= @form.proj_repo %> <br>
-<%= @form.proj_url %> <br>
-
-<%= @form.oop %> <br>
-<%= @form.modular %> <br>
-<%= @form.full_stack %> <br>
-<%= @form.testing %> <br>
-<%= @form.db %> <br>
-<%= @form.debugging %> <br>
-<%= @form.problem_solving %> <br>
-<%= @form.js %> <br>
-<%= @form.html %> <br>
-<%= @form.css %> <br>
-<%= @form.teamwork %> <br>
-<%= @form.self_motivation %> <br>
-<%= @form.communication %> <br>
-<%= @form.energy_level %> <br>
-<%= @form.aptitude %> <br>
+<body style="background-color:#114B5F; margin:none; padding:none;">
+  <div style="overflow-x:hidden;">
+    <table style="background-color:#456990; border-width: 1rem; border-color: #D2ECD7; border-style: solid; color:#D2ECD7; font-family: 'Century Gothic', 'Tahoma', sans-serif; letter-spacing:.3rem; max-width:650px; width: 80%; min-width:400px; margin-top:2rem; margin-bottom:4rem; margin-left:auto; margin-right:auto;">
+      <thead>
+        <tr>
+          <th colspan="2" style="text-align:center;">
+            <h1 style="font-size:2rem; padding-top:1rem; margin-bottom:0"><strong>TRIM AGENCY</strong></h1>
+            <h2 style="font-size:2rem; margin-top:.8rem; margin-bottom:1.2rem; padding-left:1rem; padding-right:1rem;"><strong>APPRENTICESHIP 2.0</strong></h2>
+            <div style="background-color:#D2ECD7; height:3px; margin-bottom:1.6rem; margin-top:.4rem; margin-left:10%; margin-right:10%; width:80%"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody style="display:block; letter-spacing:.2rem; text-transform:uppercase; padding-left: 20px; padding-bottom: 20px;">
+        <tr>
+          <td colspan="2" style=" font-size:1.1rem;font-weight:bold; text-align:center; padding-top:1rem; padding-bottom:1rem;">Applicant Information:</td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Full Name:</strong> <%= @form.name %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Email:</strong> <%= @form.email %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Project Repo:</strong> <%= @form.proj_repo %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Project Url:</strong> <%= @form.proj_url %></td>
+        </tr>
+        <tr>
+          <td colspan="2" style=" font-size:1.1rem;font-weight:bold; text-align:center; padding-top:2rem; padding-bottom:1rem;">Applicant Self-Assessment:</td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Using best practices for OOP:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.oop %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Modular Development:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.modular %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Full-Stack Workflow Understanding:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.full_stack %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Testing:</td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.testing %></strong></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Database Knowledge:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.db %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Debugging:</td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.debugging %></strong></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Problem Solving Skills:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.problem_solving %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>JavaScript:</td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.js %></strong></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>HTML:</td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.html %></strong></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>CSS:</td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.css %></strong></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Working on a Team:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.teamwork %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Self Motivation:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.self_motivation %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Communications Skills:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.communication %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Your Own Energy Level:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.energy_level %></td>
+        </tr>
+        <tr>
+          <td style="font-size:.9rem; padding:10px;"><strong>Intelligence / Aptitude:</strong></td>
+          <td style="font-size:.9rem; padding:10px; padding-left:60px; padding-right:20px;"><%= @form.aptitude %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
